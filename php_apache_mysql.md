@@ -11,7 +11,7 @@
 
     sudo ln -s /usr/local/services/mysql-5.6.24 /usr/local/mysql
 
-## php ##
+## php
 
 configure
 
