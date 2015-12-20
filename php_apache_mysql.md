@@ -1,13 +1,14 @@
 #LAMP compile
 
-> date:2015/08/19 12:50:53 
-> date:2015/12/18 10:00:00 
+> date:2015/08/19 12:50:53
 
-## apache ##
+> date:2015/12/18 10:00:00
+
+## apache
 
     sudo ln -s /usr/local/services/httpd-2.4.12 /usr/local/apache
 
-## mysql ##
+## mysql
 
     sudo ln -s /usr/local/services/mysql-5.6.24 /usr/local/mysql
 
