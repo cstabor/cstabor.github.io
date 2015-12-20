@@ -97,7 +97,7 @@ config php
     sudo yum install libXpm libXpm-devel
     sudo yum install icu libicu libicu-devel
 
-###notice
+##notice
 
     php 5.5 need >= gd-2.1.0 
 
