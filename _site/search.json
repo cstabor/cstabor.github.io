@@ -4,7 +4,7 @@
 "title"    : "Linux Process Tool",
 "category" : "",
 "tags"     : "linux shell",
-"url"      : "/2017/11/08/Linux_Process_Tool/",
+"url"      : "/linux/2017/11/08/Linux_Process_Tool/",
 "date"     : "2017-11-08 17:00:00 +0800"
 } ,
 
@@ -12,7 +12,7 @@
 "title"    : "svn ignore config",
 "category" : "",
 "tags"     : "",
-"url"      : "/2016/07/04/svn_ignore_config/",
+"url"      : "/linux/2016/07/04/svn_ignore_config/",
 "date"     : "2016-07-04 16:28:00 +0800"
 } ,
 
@@ -20,7 +20,7 @@
 "title"    : "shell flow control",
 "category" : "",
 "tags"     : "",
-"url"      : "/2016/06/16/shell_flow_controll/",
+"url"      : "/linux/2016/06/16/shell_flow_controll/",
 "date"     : "2016-06-16 12:00:36 +0800"
 } ,
 
@@ -28,7 +28,7 @@
 "title"    : "bash shortcut",
 "category" : "",
 "tags"     : "",
-"url"      : "/2016/06/01/bash_shortcut/",
+"url"      : "/linux/2016/06/01/bash_shortcut/",
 "date"     : "2016-06-01 23:58:00 +0800"
 } ,
 
@@ -36,7 +36,7 @@
 "title"    : "nginx proxy apache",
 "category" : "",
 "tags"     : "nginx, php",
-"url"      : "/2016/05/28/nginx_proxy_apache/",
+"url"      : "/php/2016/05/28/nginx_proxy_apache/",
 "date"     : "2016-05-28 22:36:36 +0800"
 } ,
 
@@ -44,7 +44,7 @@
 "title"    : "php readline support",
 "category" : "",
 "tags"     : "php, php_ext",
-"url"      : "/2016/05/28/php_readline_support/",
+"url"      : "/php/2016/05/28/php_readline_support/",
 "date"     : "2016-05-28 22:34:36 +0800"
 } ,
 
@@ -52,7 +52,7 @@
 "title"    : "python study",
 "category" : "",
 "tags"     : "",
-"url"      : "/2016/05/28/python_study/",
+"url"      : "/python/2016/05/28/python_study/",
 "date"     : "2016-05-28 22:13:36 +0800"
 } ,
 
@@ -60,7 +60,7 @@
 "title"    : "byte order",
 "category" : "",
 "tags"     : "",
-"url"      : "/2016/05/28/byte_order/",
+"url"      : "/linux/2016/05/28/byte_order/",
 "date"     : "2016-05-28 22:03:36 +0800"
 } ,
 
@@ -68,7 +68,7 @@
 "title"    : "vim selected operation",
 "category" : "",
 "tags"     : "",
-"url"      : "/2016/05/28/vim_selected_operation/",
+"url"      : "/vim/2016/05/28/vim_selected_operation/",
 "date"     : "2016-05-28 18:23:36 +0800"
 } ,
 
@@ -76,7 +76,7 @@
 "title"    : "hello world",
 "category" : "",
 "tags"     : "",
-"url"      : "/2016/05/28/hello_world/",
+"url"      : "/life/2016/05/28/hello_world/",
 "date"     : "2016-05-28 17:28:36 +0800"
 } ,
 
@@ -84,7 +84,7 @@
 "title"    : "zendstudio annotation prompt",
 "category" : "",
 "tags"     : "",
-"url"      : "/2016/05/28/zendstudio_annotation_prompt/",
+"url"      : "/php/2016/05/28/zendstudio_annotation_prompt/",
 "date"     : "2016-05-28 14:13:36 +0800"
 } ,
 
@@ -92,7 +92,7 @@
 "title"    : "yii cheatsheet",
 "category" : "",
 "tags"     : "yii2",
-"url"      : "/2016/05/28/yii2_cheatsheet/",
+"url"      : "/php/2016/05/28/yii2_cheatsheet/",
 "date"     : "2016-05-28 14:13:36 +0800"
 } ,
 
@@ -100,7 +100,7 @@
 "title"    : "Welcome to Jekyll!",
 "category" : "",
 "tags"     : "",
-"url"      : "/2016/05/28/welcome-to-jekyll/",
+"url"      : "/jekyll/update/2016/05/28/welcome-to-jekyll/",
 "date"     : "2016-05-28 14:13:36 +0800"
 } ,
 
@@ -108,7 +108,7 @@
 "title"    : "vim encoding",
 "category" : "",
 "tags"     : "",
-"url"      : "/2016/05/28/vim_encoding/",
+"url"      : "/vim/2016/05/28/vim_encoding/",
 "date"     : "2016-05-28 14:13:36 +0800"
 } ,
 
@@ -116,7 +116,7 @@
 "title"    : "vim clipboard",
 "category" : "",
 "tags"     : "",
-"url"      : "/2016/05/28/vim_clipboard/",
+"url"      : "/vim/2016/05/28/vim_clipboard/",
 "date"     : "2016-05-28 14:13:36 +0800"
 } ,
 
@@ -124,7 +124,7 @@
 "title"    : "thinkpad e430 centos 7 wireless driver",
 "category" : "",
 "tags"     : "",
-"url"      : "/2016/05/28/thinkpad_e430_cenos7_wireless_driver/",
+"url"      : "/centos/2016/05/28/thinkpad_e430_cenos7_wireless_driver/",
 "date"     : "2016-05-28 14:13:36 +0800"
 } ,
 
@@ -132,7 +132,7 @@
 "title"    : "python cheatsheet",
 "category" : "",
 "tags"     : "",
-"url"      : "/2016/05/28/python_cheatsheet/",
+"url"      : "/python/2016/05/28/python_cheatsheet/",
 "date"     : "2016-05-28 14:13:36 +0800"
 } ,
 
@@ -140,7 +140,7 @@
 "title"    : "nginx install",
 "category" : "",
 "tags"     : "",
-"url"      : "/2016/05/28/nginx_install/",
+"url"      : "/nginx/2016/05/28/nginx_install/",
 "date"     : "2016-05-28 14:13:36 +0800"
 } ,
 
@@ -148,7 +148,7 @@
 "title"    : "linux file system",
 "category" : "",
 "tags"     : "",
-"url"      : "/2016/05/28/linux_file_system/",
+"url"      : "/linux/2016/05/28/linux_file_system/",
 "date"     : "2016-05-28 14:13:36 +0800"
 } ,
 
@@ -156,7 +156,7 @@
 "title"    : "git tutorial",
 "category" : "",
 "tags"     : "",
-"url"      : "/2016/05/28/git_tutorial/",
+"url"      : "/git/2016/05/28/git_tutorial/",
 "date"     : "2016-05-28 14:13:36 +0800"
 } ,
 
@@ -164,7 +164,7 @@
 "title"    : "composer help",
 "category" : "",
 "tags"     : "",
-"url"      : "/2016/05/28/composer_help/",
+"url"      : "/php/2016/05/28/composer_help/",
 "date"     : "2016-05-28 14:13:36 +0800"
 } ,
 
@@ -172,7 +172,7 @@
 "title"    : "centos7 software",
 "category" : "",
 "tags"     : "",
-"url"      : "/2016/05/28/centos7_software_install/",
+"url"      : "/centos/2016/05/28/centos7_software_install/",
 "date"     : "2016-05-28 14:13:36 +0800"
 } ,
 
@@ -180,7 +180,7 @@
 "title"    : "centos7 lamp source install",
 "category" : "",
 "tags"     : "",
-"url"      : "/2016/05/28/centos7_lamp_source_install/",
+"url"      : "/lamp/2016/05/28/centos7_lamp_source_install/",
 "date"     : "2016-05-28 14:13:36 +0800"
 } ,
 
@@ -188,7 +188,7 @@
 "title"    : "centos7 dns",
 "category" : "",
 "tags"     : "",
-"url"      : "/2016/05/28/centos7_dns/",
+"url"      : "/centos/2016/05/28/centos7_dns/",
 "date"     : "2016-05-28 14:13:36 +0800"
 } 
 
