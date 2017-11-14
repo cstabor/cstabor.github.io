@@ -3,7 +3,7 @@ layout: post
 title:  "nginx proxy apache"
 date:   2016-05-28 22:36:36 +0800
 categories: php
-tags: nginx, php
+tags: nginx php
 ---
 
 ```
