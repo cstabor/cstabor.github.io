@@ -6,7 +6,7 @@ author: helloworld
 url: http://cstabor.github.io
 resume_site: http://cstabor.github.io/me/
 github: https://github.com/test/
-baseurl: "/blog"  # document root
+baseurl: ""
 description: "" 
 motto: "" 
 banner: "self maker"
