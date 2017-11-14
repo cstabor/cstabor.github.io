@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-	<title>thinkpad e430 centos 7 wireless driver</title>
+	<title>php apache mysql</title>
 	<meta name="description" content="毛小可嗒嗒的个人博客、web、前端、javascript、css、html、H5、CSS3、web前端工程师、gulp、jekyll、git">
 	<meta name="keywords" content="web、前端、webapp、个人博客、技术博客、github博客、javascript、css、html、H5、CSS3、web前端工程师、gulp" />
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -78,8 +78,8 @@
     <div class="container" >
   	
         <!--
-		    <h1>thinkpad e430 centos 7 wireless driver</h1>
-		    <p>Post on May 28, 2016 by <a href="/about">helloworld</a></p>
+		    <h1>php apache mysql</h1>
+		    <p>Post on Aug 19, 2015 by <a href="/about">helloworld</a></p>
 		-->
         <h1></h1>
     
@@ -90,8 +90,8 @@
 <div class="banner">
   <div class="container lh30">
   	
-    	<a href="/categories/#centos-ref">centos</a>	/
-    	<a href="/tag/#-ref"></a>
+    	<a href="/categories/#php-ref">php</a>	/
+    	<a href="/tag/#php mysql httpd LAMP-ref">php mysql httpd LAMP</a>
     
       <div id="search-container" class="pull-right">
           <input type="text" id="search-input" placeholder=" 试试直接搜索吧...">
@@ -460,54 +460,144 @@
       <div class="panel docs-content">
         <div class="wrapper">
             <header class="post-header">
-              <h1 class="post-title">thinkpad e430 centos 7 wireless driver</h1>
+              <h1 class="post-title">php apache mysql</h1>
               <!--
-                <p class="post-meta">May 28, 2016</p>
+                <p class="post-meta">Aug 19, 2015</p>
               -->
-              <div class="meta">Date： <span class="postdate">May 28, 2016</span> Author： <a target="_blank" href="http://0.0.0.0:4000">helloworld</a></div>
+              <div class="meta">Date： <span class="postdate">Aug 19, 2015</span> Author： <a target="_blank" href="http://0.0.0.0:4000">helloworld</a></div>
               <br />
               <blockquote><p>本文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"> 知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议 </a>进行许可。转载请注明来自<a href="http://cstabor.github.io">cstabor</a></p></blockquote>
             </header>
             <article class="post-content">
-              <h2 id="参考">参考</h2>
+              <ul id="markdown-toc">
+  <li><a href="#apache" id="markdown-toc-apache">apache</a></li>
+  <li><a href="#mysql" id="markdown-toc-mysql">mysql</a></li>
+  <li><a href="#php" id="markdown-toc-php">php</a></li>
+</ul>
 
-<p>centos wireless driver</p>
+<p>#LAMP source compile</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://elrepo.org/tiki/wl-kmod
-http://www.broadcom.com/support/?gid=1
+<blockquote>
+  <p>date:2015/08/19 12:50:53</p>
+</blockquote>
+
+<blockquote>
+  <p>date:2015/12/18 10:00:00</p>
+</blockquote>
+
+<h2 id="apache">apache</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ln -s /usr/local/services/httpd-2.4.12 /usr/local/apache
 </code></pre></div></div>
 
-<p>选择
-    Linux® STA 64-bit driver</p>
+<h2 id="mysql">mysql</h2>
 
-<p>compile:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rpmbuild --rebuild --define 'packager user_00' /home/user_00/Downloads/wl-kmod-6_30_223_271-2.el7.elrepo.nosrc.rpm
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ln -s /usr/local/services/mysql-5.6.24 /usr/local/mysql
 </code></pre></div></div>
 
-<p>error:</p>
+<h2 id="php">php</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make: *** /usr/src/kernels/3.10.0-229.20.1.el7.x86_64: No such file or directory.
-是由于内核版本的源代码不一致，造成，最终通过升级内核，解决。
+<p>configure</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./configure \
+--prefix=/usr/local/services/php-5.6.16 \
+--with-config-file-path=/usr/local/php/lib \
+--with-config-file-scan-dir=/usr/local/php/conf \
+--with-pdo-mysql=/usr/local/mysql \
+--with-apxs2=/usr/local/apache/bin/apxs \
+--with-libxml-dir=/usr/local/services/libxml2 \
+--with-freetype-dir=/usr/local/services/freetype \
+--with-png-dir=/usr/local/services/libpng \
+--with-jpeg-dir=/usr/local/services/jpeg \
+--with-zlib-dir=/usr/local/services/zlib \
+--with-curl=/usr/local/services/curl \
+--with-gd=/usr/local/services/gd \
+--with-openssl \
+--with-xpm-dir \
+--with-mhash \
+--enable-mbstring \
+--enable-mbregex \
+--enable-maintainer-zts \
+--enable-sockets \
+--enable-pcntl \
+--enable-sysvmsg \
+--enable-sysvsem \
+--enable-sysvshm \
+--enable-soap \
+--enable-shmop \
+--enable-bcmath \
+--enable-zip \
+--enable-calendar \
+--enable-ctype \
+--enable-dom \
+--enable-filter \
+--enable-gd-native-ttf \
+--enable-hash \
+--enable-json \
+--enable-posix \
+--enable-shared \
+--enable-simplexml \
+--enable-static \
+--enable-tokenizer \
+--enable-xml \
+--enable-xmlwriter \
+--enable-pdo \
+--enable-inline-optimization \
+--enable-mysqlnd \
+--enable-exif \
+--enable-intl \
+--enable-phar \
+--enable-cli \
+--enable-opcache
 </code></pre></div></div>
 
-<p>resolved:</p>
+<p>compile</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum update
-3.10.0-327.3.1.el7.x86_64
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make
 </code></pre></div></div>
 
-<p>redo：</p>
+<p>install</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>write /home/user_00/rpmbuild/RPMS/x86_64/kmod-wl-6_30_223_271-2.el7.local.x86_64.rpm
-.....
-exit 0
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make install
 </code></pre></div></div>
 
-<h2 id="相关资料">相关资料</h2>
+<p>create symbol link</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://www.rpmfind.net/linux/rpm2html/search.php?query=kernel-devel-x86_64
-https://wiki.centos.org/HowTos/Laptops/Wireless
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ln -s /usr/local/services/php-5.6.16 /usr/local/php
+</code></pre></div></div>
+
+<p>add env variable</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo echo "export PATH=$PATH:/usr/local/php" &gt;&gt; /etc/profile
+source /etc/profile
+</code></pre></div></div>
+
+<p>config php</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># /usr/local/services/php-5.6.16/lib/php/extensions/no-debug-zts-20131226/
+zend_extension=opcache.so
+
+apc
+pc cache 3.1.13 在2012年9月3日后就不再更新
+从php-5.5开始使用内置的 opcache
+
+# need dependence package
+sudo yum install libXpm libXpm-devel
+sudo yum install icu libicu libicu-devel
+</code></pre></div></div>
+
+<p>##notice</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php 5.5 need &gt;= gd-2.1.0 
+
+https://github.com/libgd/libgd/archive/gd-2.1.1.tar.gz
+
+complile gd
+./configure \
+--prefix=/usr/local/services/gd-2.1.1 \
+--with-freetype=/usr/local/services/freetype \
+--with-png=/usr/local/services/libpng \
+--with-jpeg=/usr/local/services/jpeg
 </code></pre></div></div>
 
             </article>
