@@ -1,0 +1,27 @@
+# Site settings
+host: 0.0.0.0
+name: Hello World 
+email: test@outlook.com
+author: helloworld 
+url: http://cstabor.github.io
+resume_site: http://cstabor.github.io/me/
+github: https://github.com/test/
+baseurl: "/blog"  # document root
+description: "" 
+motto: "" 
+banner: "self maker"
+#permalink: /:categories/:year/:month/:day/:title/
+permalink: /:year/:month/:day/:title/
+excerpt_separator:  '<!-- more -->' #文章摘要
+paginate: 8
+paginate_path: "page:num"
+plugins: [jekyll-paginate]
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
+github_username: test 
+highlighter: rouge
+markdown: kramdown
+FB:
+  comments :
+    provider : disqus
+    disqus :
+        short_name : xiaokedada

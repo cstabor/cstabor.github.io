@@ -1,0 +1,18 @@
+package myproto;
+
+message GardenListItem {
+  repeated GardenItem item = 1;
+}
+
+message GardenItem {
+  optional string garden_name = 1;
+  required string district = 2; // 片区
+  optional string average_price = 3;
+  optional string area = 4; // 面积
+  optional string households = 5; // 户数
+  optional string rental_rates = 6; // 出租率
+  optional string finish_date = 7;
+  optional string greening_rate = 8;
+  optional string parking_space = 9; // 停车位
+  optional string real_type = 10; // 物业类型
+}

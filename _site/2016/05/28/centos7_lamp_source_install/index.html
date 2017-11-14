@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<title>centos7 lamp source install</title>
+	<meta name="description" content="毛小可嗒嗒的个人博客、web、前端、javascript、css、html、H5、CSS3、web前端工程师、gulp、jekyll、git">
+	<meta name="keywords" content="web、前端、webapp、个人博客、技术博客、github博客、javascript、css、html、H5、CSS3、web前端工程师、gulp" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="author" contect="maoxiaoke, maoxiaoke@outlook.com">
+	<meta name="robots" content="index,follow">
+	<link rel="shortcut icon" href="/blog/styles/images/favicon.png">
+	<link rel="icon" href="/blog/styles/images/favicon.png">
+	<link rel="stylesheet" href="/blog/styles/css/index.css">
+	<link rel="stylesheet" href="/blog/styles/css/fontawesome/css/font-awesome.min.css">
+	<link rel="canonical" href="/bloghttp://0.0.0.0:4000">
+	<!--[if lte IE 9]>
+    	<script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+  	<![endif]-->
+	<!--[if lt IE 9]>
+    	<script>window.location.href='/upgrade-your-browser.html';</script>
+    <![endif]-->
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+  			var hm = document.createElement("script");
+  			hm.src = "https://hm.baidu.com/hm.js?40ab350f7c60a488b8e8093960c0faf2";
+  			var s = document.getElementsByTagName("script")[0]; 
+  			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+</head>
+  <body class="index">
+    <header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">
+        <img src="/blog/styles/images/logo.png" alt="小可嗒嗒的个人博客">
+      </a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li></li>
+        <li>
+          <a href="/blog/">首页</a>
+        </li>
+        <li>
+          <a href="/blog/categories/">博文分类</a>
+        </li>
+        <li>
+          <a href="/blog/tag">标签目录</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a rel="nofollow" href="/blog/reference">外域链接</a></li>
+        <li><a href="/blog/effects">DEMO</a></li>
+        <li><a href="/blog/donate">打赏我</a></li>
+        <li><a rel="nofollow" href="/blog/me">关于我</a></li> 
+        <li><a rel="nofollow" href="/blog/talktome">TalkToMe</a></li>
+             
+        <!--
+        <li><a rel="nofollow" target="_blank" href="http://cstabor.github.io/me/">关于我</a></li> 
+        -->
+      </ul>
+    </nav>
+  </div>
+</header>
+    <div class="docs-header pa" id="content">
+    <canvas id="mycanvas">你的浏览器不支持canvas</canvas>
+    <div class="container" >
+  	
+        <!--
+		    <h1>centos7 lamp source install</h1>
+		    <p>Post on May 28, 2016 by <a href="/about">helloworld</a></p>
+		-->
+        <h1></h1>
+    
+  </div>
+</div>
+    
+      
+<div class="banner">
+  <div class="container lh30">
+  	
+    	<a href="/blog/categories/#lamp-ref">lamp</a>	/
+    	<a href="/blog/tag/#-ref"></a>
+    
+      <div id="search-container" class="pull-right">
+          <input type="text" id="search-input" placeholder=" 试试直接搜索吧...">
+          <label class="searchIcon glyphicon glyphicon-search" for="search-input"></label>
+          <ul id="results-container"></ul>
+      </div>
+  </div>
+</div>
+
+    
+    <div class="container docs-container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="sidebar hidden-print" role="complementary">
+        <div id="navigation">
+  <h1>目录</h1>
+  <ul class="nav sidenav">
+<!--
+    
+      
+      
+      
+      
+
+      
+        <li><a href="#year_2017">2017</a>
+          <ul class="nav">
+            <li><a href="#month_2017_November">November</a></li>
+      
+
+      
+        
+            </ul>
+          </li>
+          <li><a href="#year_2016">2016</a>
+            <ul class="nav">
+              <li><a href="#month_2016_July">July</a></li>
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2016_June">June</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2016_May">May</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            </ul>
+          </li>
+      
+    
+-->
+  </ul>
+</div> 
+      </div>
+    </div>
+    <div class="col-md-9" role="main">
+      <div class="panel docs-content">
+        <div class="wrapper">
+            <header class="post-header">
+              <h1 class="post-title">centos7 lamp source install</h1>
+              <!--
+                <p class="post-meta">May 28, 2016</p>
+              -->
+              <div class="meta">Date： <span class="postdate">May 28, 2016</span> Author： <a target="_blank" href="http://0.0.0.0:4000">helloworld</a></div>
+              <br />
+              <blockquote><p>本文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"> 知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议 </a>进行许可。转载请注明来自<a href="http://xiaokedada.com">小可嗒嗒的博客</a></p></blockquote>
+            </header>
+            <article class="post-content">
+              <p>#LAMP compile</p>
+
+<blockquote>
+  <p>date:2015/08/19 12:50:53</p>
+</blockquote>
+
+<blockquote>
+  <p>date:2015/12/18 10:00:00</p>
+</blockquote>
+
+<h2 id="apache">apache</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ln -s /usr/local/services/httpd-2.4.12 /usr/local/services/httpd
+</code></pre></div></div>
+
+<h2 id="mysql">mysql</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tar zxf mysql-5.6.26.tar.gz
+
+cd mysql-5.6.26
+
+make \
+-DCMAKE_INSTALL_PREFIX:PATH=/usr/local/services/mysql-5.6.26 \
+-DEXTRA_CHARSETS=all \
+-DENABLED_LOCAL_INFILE=1 \
+-DWITH_READLINE=1 \
+-DMYSQL_USER=mysql \
+-DENABLED_LOCAL_INFILE=1 \
+-DWITH_SSL=yes
+
+make
+
+make install
+
+sudo ln -s /usr/local/services/mysql-5.6.26 /usr/local/services/mysql
+</code></pre></div></div>
+
+<h2 id="php">php</h2>
+
+<h3 id="configure">configure</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./configure \
+--prefix=/usr/local/services/php-5.6.16 \
+--with-mysql=/usr/local/services/mysql \
+--with-mysqli=/usr/local/services/mysql/bin/mysql_config \
+--with-pdo-mysql=/usr/local/services/mysql \
+--with-apxs2=/usr/local/services/httpd/bin/apxs \
+--with-libxml-dir=/usr/local/services/libxml2 \
+--with-freetype-dir=/usr/local/services/freetype \
+--with-png-dir=/usr/local/services/libpng \
+--with-jpeg-dir=/usr/local/services/jpeg \
+--with-zlib-dir=/usr/local/services/zlib \
+--with-curl=/usr/local/services/curl \
+--with-gd=/usr/local/services/libgd \
+--with-openssl=/usr/local/services/openssl \
+--with-mhash=/usr/local/services/mhash \
+--with-mcrypt=/usr/local/services/libmcrypt \
+--enable-mbstring \
+--enable-mbregex \
+--enable-maintainer-zts \
+--enable-sockets \
+--enable-pcntl \
+--enable-sigchild \
+--enable-sysvmsg \
+--enable-sysvsem \
+--enable-sysvshm \
+--enable-soap \
+--enable-shmop \
+--enable-bcmath \
+--enable-zip \
+--enable-calendar \
+--enable-ctype \
+--enable-dom \
+--enable-filter \
+--enable-gd-native-ttf \
+--enable-hash \
+--enable-json \
+--enable-posix \
+--enable-shared \
+--enable-simplexml \
+--enable-static \
+--enable-tokenizer \
+--enable-xml \
+--enable-xmlwriter \
+--enable-pdo \
+--enable-inline-optimization \
+--enable-mysqlnd \
+--enable-exif \
+--enable-phar \
+--enable-cli \
+--enable-zend-signals \
+--enable-opcache
+</code></pre></div></div>
+
+<p>compile</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make
+</code></pre></div></div>
+
+<p>install</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make install
+</code></pre></div></div>
+
+<p>question</p>
+
+<p>create symbol link</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ln -s /usr/local/services/php-5.6.16 /usr/local/php
+</code></pre></div></div>
+
+<p>add env variable</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo echo "export PATH=$PATH:/usr/local/php" &gt;&gt; /etc/profile
+source /etc/profile
+</code></pre></div></div>
+
+<p>config php</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># /usr/local/services/php-5.6.16/lib/php/extensions/no-debug-zts-20131226/
+zend_extension=opcache.so
+
+apc
+pc cache 3.1.13 在2012年9月3日后就不再更新
+从php-5.5开始使用内置的 opcache
+
+# need dependence package, all of it will not build into php core
+sudo yum install libXpm libXpm-devel
+sudo yum install icu libicu libicu-devel
+</code></pre></div></div>
+
+<p>##notice</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php 5.5 need &gt;= gd-2.1.0 
+
+complile gd
+./configure \
+--prefix=/usr/local/services/gd-2.1.0 \
+--with-freetype=/usr/local/services/freetype \
+--with-png=/usr/local/services/libpng \
+--with-jpeg=/usr/local/services/jpeg
+
+
+./configure --prefix=/usr/local/services/libmcrypt-2.5.8
+
+./configure --prefix=/usr/local/services/mhash-0.9.9.9
+
+
+ 遗留问题
+ --with-xpm-dir \    依赖于x11	
+ --enable-intl \		国际化
+ --with-config-file-scan-dir=/usr/local/php/conf \	貌似不生效
+
+
+1. 对所有包的依赖都按照软链接来建立,不要将具体的版本编译到内核中去。
+2. Error, X11/Xpm.h not found， 依赖X11, 不要将其包含在编译中, 方法： ./configure 后， vi main/php_config.h 文件中的 `#define HAVE_GD_XPM 1` 注释掉。https://bugs.php.net/bug.php?id=66204
+</code></pre></div></div>
+
+
+            </article>
+          <hr>
+          <blockquote><p>对于本文内容有问题或建议的小伙伴，欢迎在文章底部留言交流讨论。</p></blockquote>
+          <div class="text-center">
+            <a href="/blog/donate/" target="_blank" style="text-decoration: none"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> 您的支持是将是我写作最大的动力!</button></a>
+          </div>
+        </div>
+      </div>
+      <!--comment-->
+      <!--code for 网易云跟帖
+      <div class="panel docs-content">
+        <article class="post-content">
+          <div class="wrapper">
+            <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+            <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+            <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+            <script>
+            var cloudTieConfig = {
+            url: document.location.href, 
+            sourceId: "",
+            productKey: "b6d55f09637f497389b80bafc11aada1",
+            target: "cloud-tie-wrapper"
+            };
+            var yunManualLoad = true;
+            Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+            </script>
+          </div>
+        </article>
+      </div> -->
+      <!--Gitment-->
+      <div id="container"></div>
+      <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+      <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+      <script>
+        var gitment = new Gitment({
+          id: window.location.pathname, 
+          owner: 'maoxiaoke',
+          repo: 'maoxiaoke.github.io',
+          oauth: {
+          client_id: 'a884d93361c09d5c03b3',
+          client_secret: '73f1de789521db427d431e9f8488db2f974ee0ba',
+          },
+        })
+        gitment.render('container')
+      </script>
+      
+    </div>
+  </div>
+</div>
+
+
+    <footer class="footer" role="contentinfo">
+	<!--不蒜子pv/uv统计-->
+	<div class="post-meta">
+            <p>Total <span id="busuanzi_value_site_pv"></span> views，您是本站的第<span id="busuanzi_value_site_uv"></span>个小伙伴，<span id="busuanzi_value_page_pv"></span> Hits</p><br/>
+    </div>
+	<div class="container">
+		<p class="copyright">Copyright &copy; 2017 <a href="http://cstabor.github.io/me/" target="_blank"><code>helloworld</code></a>. All rights reserved. </p>
+		<p>Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a>， Data by <a href="https://tongji.baidu.com/web/23811489/overview/index" target="_blank">Bai Du</a>.</p>
+	</div>
+	<ul id="gotop"><li><span>TOP</span></li></ul>
+</footer>
+<script src="http://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="/blog/styles/js/function.min.js"></script>
+<script src="/blog/styles/js/lessismore.js"></script>
+<script src="/blog/styles/js/application.min.js"></script>
+  </body>
+</html>
