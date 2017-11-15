@@ -482,7 +482,6 @@
           <li><a href="#17-输出到指定文件" id="markdown-toc-17-输出到指定文件">1.7 输出到指定文件</a></li>
           <li><a href="#18-跟踪指定调用的耗时" id="markdown-toc-18-跟踪指定调用的耗时">1.8 跟踪指定调用的耗时</a></li>
           <li><a href="#19-内核态和用户态" id="markdown-toc-19-内核态和用户态">1.9 内核态和用户态</a></li>
-          <li><a href="#refer" id="markdown-toc-refer">refer</a></li>
         </ul>
       </li>
       <li><a href="#2-ltrace" id="markdown-toc-2-ltrace">2. ltrace</a></li>
@@ -495,7 +494,7 @@
               <li><a href="#342-查看cpu列表" id="markdown-toc-342-查看cpu列表">3.4.2 查看CPU列表</a></li>
               <li><a href="#343-按cpu排序" id="markdown-toc-343-按cpu排序">3.4.3 按CPU排序</a></li>
               <li><a href="#344-查看指定进程id的负载" id="markdown-toc-344-查看指定进程id的负载">3.4.4 查看指定进程ID的负载</a></li>
-              <li><a href="#345-根据用户查看进程httpd负载" id="markdown-toc-345-根据用户查看进程httpd负载">3.4.5 根据用户查看进程httpd负载</a></li>
+              <li><a href="#345-查看用户进程负载" id="markdown-toc-345-查看用户进程负载">3.4.5 查看用户进程负载</a></li>
             </ul>
           </li>
           <li><a href="#35-ps-查询" id="markdown-toc-35-ps-查询">3.5 (ps) 查询</a>            <ul>
@@ -504,18 +503,22 @@
           </li>
         </ul>
       </li>
-    </ul>
-  </li>
-  <li><a href="#子进程" id="markdown-toc-子进程">子进程</a>    <ul>
-      <li><a href="#11-ps子进程列表" id="markdown-toc-11-ps子进程列表">1.1 (ps)子进程列表</a></li>
-      <li><a href="#12-pstree子进程列表" id="markdown-toc-12-pstree子进程列表">1.2 (pstree)子进程列表</a>        <ul>
-          <li><a href="#121-查看指定用户的进程树" id="markdown-toc-121-查看指定用户的进程树">1.2.1 查看指定用户的进程树</a></li>
+      <li><a href="#4-子进程" id="markdown-toc-4-子进程">4. 子进程</a>        <ul>
+          <li><a href="#41-ps子进程列表" id="markdown-toc-41-ps子进程列表">4.1 (ps)子进程列表</a></li>
+          <li><a href="#42-pstree子进程列表" id="markdown-toc-42-pstree子进程列表">4.2 (pstree)子进程列表</a>            <ul>
+              <li><a href="#421-查看指定用户的进程树" id="markdown-toc-421-查看指定用户的进程树">4.2.1 查看指定用户的进程树</a></li>
+            </ul>
+          </li>
         </ul>
       </li>
+    </ul>
+  </li>
+  <li><a href="#线程" id="markdown-toc-线程">线程</a>    <ul>
       <li><a href="#11-ps查看" id="markdown-toc-11-ps查看">1.1 (ps)查看</a></li>
       <li><a href="#12-top查看" id="markdown-toc-12-top查看">1.2 (top)查看</a></li>
     </ul>
   </li>
+  <li><a href="#协程" id="markdown-toc-协程">协程</a></li>
 </ul>
 
 <h1 id="进程">进程</h1>
@@ -523,6 +526,14 @@
 <h2 id="1-strace">1. strace</h2>
 
 <p>strace - trace system calls and signals</p>
+
+<blockquote>
+  <p>Refer</p>
+</blockquote>
+
+<ol>
+  <li>https://blog.packagecloud.io/eng/2015/11/15/strace-cheat-sheet/</li>
+</ol>
 
 <h3 id="11-诊断进程id">1.1 诊断进程ID</h3>
 
@@ -662,12 +673,6 @@ file num: 256
 
 <p>如果用 strace 跟踪一个进程，输出结果很少，可以试试 ltrace，可能会发现别有洞天。记住有内核态和用户态之分。</p>
 
-<h3 id="refer">refer</h3>
-
-<ol>
-  <li>https://blog.packagecloud.io/eng/2015/11/15/strace-cheat-sheet/</li>
-</ol>
-
 <h2 id="2-ltrace">2. ltrace</h2>
 
 <p>ltrace - A library call tracer</p>
@@ -776,7 +781,7 @@ readlink("/home/data/services/yesdatphp/bosslite/api/runtime", "/data/logs/bossl
 
 <p>注意：分隔符是 逗号</p>
 
-<h4 id="345-根据用户查看进程httpd负载">3.4.5 根据用户查看进程httpd负载</h4>
+<h4 id="345-查看用户进程负载">3.4.5 查看用户进程负载</h4>
 
 <ol>
   <li>top 进入负载检测页面</li>
@@ -865,9 +870,9 @@ S    15467
 
 </code></pre></div></div>
 
-<h1 id="子进程">子进程</h1>
+<h2 id="4-子进程">4. 子进程</h2>
 
-<h2 id="11-ps子进程列表">1.1 (ps)子进程列表</h2>
+<h3 id="41-ps子进程列表">4.1 (ps)子进程列表</h3>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ps -ostat,cmd --ppid &lt;ppid&gt;
 </code></pre></div></div>
@@ -896,7 +901,7 @@ S    15467
 48686 S    /usr/local/services/httpd-2.4.12/bin/httpd -k start
 </code></pre></div></div>
 
-<h2 id="12-pstree子进程列表">1.2 (pstree)子进程列表</h2>
+<h3 id="42-pstree子进程列表">4.2 (pstree)子进程列表</h3>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[user_00@node7 yesdatphp]$ pstree -p 15454
 httpd(15454)─┬─httpd(15461)
@@ -909,7 +914,7 @@ httpd(15454)─┬─httpd(15461)
 
 </code></pre></div></div>
 
-<h3 id="121-查看指定用户的进程树">1.2.1 查看指定用户的进程树</h3>
+<h4 id="421-查看指定用户的进程树">4.2.1 查看指定用户的进程树</h4>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pstree &lt;user_name&gt;
 </code></pre></div></div>
@@ -921,7 +926,7 @@ mysqld_safe───mysqld───18*[{mysqld}]
 
 </code></pre></div></div>
 
-<p>#线程</p>
+<h1 id="线程">线程</h1>
 
 <p>线程是现代操作系统上进行并行执行的一个流行的编程方面的抽象概念。当一个程序内有多个线程被叉分出用以执行多个流时，这些线程就会在它们之间共享 特定的资源（如，内存地址空间、打开的文件），以使叉分开销最小化，并避免大量高成本的IPC（进程间通信）通道。这些功能让线程在并发执行时成为一个高 效的机制。
 在Linux中，程序中创建的线程（也称为轻量级进程，LWP）会具有和程序的PID相同的“线程组ID”。然后，各个线程会获得其自身的线程 ID（TID）。对于Linux内核调度器而言，线程不过是恰好共享特定资源的标准的进程而已。经典的命令行工具，如ps或top，都可以用来显示线程级 别的信息，只是默认情况下它们显示进程级别的信息。</p>
@@ -978,6 +983,8 @@ KiB Swap:  6103036 total,  6103036 free,        0 used.  3678600 avail Mem
 </code></pre></div></div>
 
 <p>也可以进入 top 之后再按 <code class="highlighter-rouge">H</code> ，显示线程</p>
+
+<h1 id="协程">协程</h1>
 
 
             </article>
